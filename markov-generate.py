@@ -31,12 +31,12 @@ def printMarkovList(upperBound):
 	markovList = generateMarkov(upperBound)
 	L = len(markovList)
 	print(L)
-	filename = 'Markov'+str(L)+'.txt'
+	filename = 'data/Markov'+str(L)+'.txt'
 	with open(filename, mode='wt', encoding='utf-8') as f:
     		f.write('\n'.join(str(m) for m in markovList))
 
 	
-upperBound = 10**230
+upperBound = 10**410
 printMarkovList(upperBound)
 
 
