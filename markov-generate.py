@@ -31,7 +31,7 @@ def printMarkovList(upperBound):
     		f.write('\n'.join(str(m) for m in markovList))
 
 	
-upperBound = 10**410
+upperBound = 10**415
 printMarkovList(upperBound)
 
 
