@@ -16,11 +16,6 @@ def generateMarkovRec(triple, prevList, upperBound) :
 		generateMarkovRec(vietaBottom(triple), prevList, upperBound)
 	else:
 		return triple
-		
-def generateMarkov(upperBound):
-	res = []
-	generateMarkovRec([1,1,1], res, upperBound)
-	return sorted(set(res))
 	
 def generateMarkov(upperBound):
 	res = []
