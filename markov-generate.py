@@ -1,5 +1,7 @@
 from numpy import *
 import matplotlib.pyplot as plt
+import sys
+
 
 		
 def vietaTop(triple) :
@@ -69,7 +71,7 @@ def checkMUC(markovTriplesList):
 		res = (triple[2] != last[2])
 		last = triple
 		i += 1
-	print('MUC check (upper Bound = '+str(upperBound)+'): '+str(res))
+	print('MUC check: '+str(res))
 	return res
 
 
@@ -80,8 +82,11 @@ def Fast(upperBound):
 	printMarkovList(markovList)
 	printMarkovTriplesList(markovTriplesList)
 
-	
+
+#sys.setrecursionlimit(3000)
+#upperBound = 10**1000
 upperBound = 10**400
+
 Fast(upperBound)
 
 
