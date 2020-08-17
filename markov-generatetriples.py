@@ -39,7 +39,7 @@ def printMarkovList(upperBound):
 	print(L)
 	filename = 'data/MarkovTriples'+str(L)+'.txt'
 	with open(filename, mode='wt', encoding='utf-8') as f:
-    		f.write('\n'.join(str(m) for m in markovList))
+    		f.write('\n'.join('{'+str(m[0])+', '+str(m[1])+', '+str(m[2])+'}' for m in markovList))
     		
 def checkMUC(upperBound):
 	markovList = generateMarkov(upperBound)
